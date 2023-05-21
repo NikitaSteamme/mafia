@@ -1,0 +1,9 @@
+body {
+    font-size: xx-large;
+}
+
+#qwe {
+    transform:scale(300%);
+    opacity:0.9;
+    cursor:pointer;
+}
