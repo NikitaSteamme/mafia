@@ -37,8 +37,20 @@ foreach ($rows as $row) {
     }
 }
 
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["new_player"])) {
+    $new_player = trim($_POST["new_player"]);
+    if (!empty($new_player)) {
+        $players[] = $new_player;
+    }
+}
+
 // Display all players in a separate table with checkboxes
 echo "<h2>All Players</h2>";
+echo "<form method='post' action=''>";
+echo "<input type='text' name='new_player' placeholder='Enter player name'>";
+echo "<input type='submit' name='add_player' value='Add'>";
+echo "</form><br>";
+
 echo "<form method='post' action='process.php'>"; // Assuming form submission to a file named "process.php"
 echo "<table class='table'>";
 echo "<thead>";
@@ -57,6 +69,8 @@ echo "</table>";
 echo "<br>";
 echo "<input type='submit' value='Pick Players'>";
 echo "</form>";
+
+
 ?>
 
 </body>

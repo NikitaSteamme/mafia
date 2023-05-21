@@ -33,6 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["selected_players"])) 
 } else {
     // If the form is not submitted or no players are selected, display an error message
     echo "<p>No players selected. Please go back and select players.</p>";
-}?>
+}
+echo "<button type='button'>Share to telegram</button>";
+?>
 </body>
 </html>
